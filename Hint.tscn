@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://image/gui_hint_battle.png" type="Texture" id=1]
+[ext_resource path="res://new_styleboxtexture.tres" type="StyleBox" id=2]
+[ext_resource path="res://font/VT323-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Button.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+extra_spacing_top = -10
+extra_spacing_bottom = -10
+font_data = ExtResource( 3 )
+
+[node name="Hint" type="Control"]
+
+[node name="Image" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 300 )
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 360.0
+margin_top = 480.0
+margin_right = 410.0
+margin_bottom = 505.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.847059, 0.372549, 1 )
+text = "OK"
+script = ExtResource( 4 )

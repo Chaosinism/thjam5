@@ -1,0 +1,145 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://SelectDifficulty.gd" type="Script" id=1]
+[ext_resource path="res://image/gui_background.png" type="Texture" id=2]
+[ext_resource path="res://new_styleboxtexture.tres" type="StyleBox" id=3]
+[ext_resource path="res://font/VT323-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+extra_spacing_top = -10
+extra_spacing_bottom = -10
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_color = Color( 0.917647, 0.968627, 0.305882, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_color = Color( 0.917647, 0.968627, 0.305882, 1 )
+font_data = ExtResource( 4 )
+
+[node name="SelectDifficulty" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="gui_background" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="ButtonEasy" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 170.0
+margin_right = 185.0
+margin_bottom = 195.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.847059, 0.372549, 1 )
+text = "Easy"
+
+[node name="ButtonHard" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 350.0
+margin_right = 185.0
+margin_bottom = 375.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.847059, 0.372549, 1 )
+text = "Hard"
+
+[node name="ButtonLunatic" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 440.0
+margin_right = 185.0
+margin_bottom = 465.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.847059, 0.372549, 1 )
+text = "Lunatic"
+
+[node name="ButtonNormal" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 260.0
+margin_right = 185.0
+margin_bottom = 285.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.847059, 0.372549, 1 )
+text = "Normal"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 70.0
+margin_right = 563.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.803922, 0.8, 0.32549, 1 )
+text = "Select Difficulty"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 290.0
+margin_top = 170.0
+margin_right = 682.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.803922, 0.8, 0.32549, 1 )
+text = "Danmaku battles start with the easy difficulty.
+You have extra $500 at the beginning of the game."
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 290.0
+margin_top = 260.0
+margin_right = 682.0
+margin_bottom = 309.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.803922, 0.8, 0.32549, 1 )
+text = "Danmaku battles start with the normal difficulty.
+You have the same amount of money as Yachie."
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 290.0
+margin_top = 350.0
+margin_right = 682.0
+margin_bottom = 399.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.803922, 0.8, 0.32549, 1 )
+text = "Danmaku battles start with the hard difficulty.
+Yachie has extra $300 at the beginning of the game."
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 290.0
+margin_top = 440.0
+margin_right = 698.0
+margin_bottom = 489.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.803922, 0.8, 0.32549, 1 )
+text = "Danmaku battles start with the highest difficulty.
+Yachie has extra $500 at the beginning of the game."
+[connection signal="pressed" from="ButtonEasy" to="." method="_on_ButtonEasy_pressed"]
+[connection signal="pressed" from="ButtonHard" to="." method="_on_ButtonHard_pressed"]
+[connection signal="pressed" from="ButtonLunatic" to="." method="_on_ButtonLunatic_pressed"]
+[connection signal="pressed" from="ButtonNormal" to="." method="_on_ButtonNormal_pressed"]

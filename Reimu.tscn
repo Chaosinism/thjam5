@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Reimu.gd" type="Script" id=1]
+[ext_resource path="res://image/chara_reimu.png" type="Texture" id=2]
+[ext_resource path="res://image/bullet_junko.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 11.0025
+
+[node name="Reimu" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.319672, -32.3698 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0172272, -25.8385 )
+shape = SubResource( 1 )
+
+[node name="Shooter" type="Node2D" parent="."]
+position = Vector2( -0.340561, -26.2233 )
+
+[node name="Indicator" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.658824 )
+position = Vector2( -0.340561, -25.8385 )
+texture = ExtResource( 3 )

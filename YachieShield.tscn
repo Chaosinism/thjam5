@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://YachieShield.gd" type="Script" id=1]
+[ext_resource path="res://Shield.gd" type="Script" id=2]
+[ext_resource path="res://image/bullet_yachie2.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 40.5798
+
+[node name="YachieShield" type="Node2D"]
+modulate = Color( 0.855469, 0.274017, 0.437551, 0.63 )
+script = ExtResource( 1 )
+
+[node name="Shield" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )
+
+[node name="Shield4" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+rotation = 1.0472
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield4"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield4"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )
+
+[node name="Shield5" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+rotation = 3.14159
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield5"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield5"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )
+
+[node name="Shield6" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+rotation = 5.23599
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield6"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield6"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )
+
+[node name="Shield2" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+rotation = 2.0944
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield2"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield2"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )
+
+[node name="Shield3" type="StaticBody2D" parent="."]
+position = Vector2( -1.1579, -0.526398 )
+rotation = 4.18879
+scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="bullet_yachie2" type="Sprite" parent="Shield3"]
+position = Vector2( -80, 0 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield3"]
+position = Vector2( -80, 0 )
+shape = SubResource( 1 )

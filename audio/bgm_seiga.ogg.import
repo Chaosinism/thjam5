@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bgm_seiga.ogg-dad114ccba25a8e86203c3e15081954e.oggstr"
+
+[deps]
+
+source_file="res://audio/bgm_seiga.ogg"
+dest_files=[ "res://.import/bgm_seiga.ogg-dad114ccba25a8e86203c3e15081954e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,139 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://image/bg3.png" type="Texture" id=2]
+[ext_resource path="res://font/VT323-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://image/illu_reimu.png" type="Texture" id=4]
+[ext_resource path="res://image/illu_yachie.png" type="Texture" id=5]
+[ext_resource path="res://new_styleboxtexture.tres" type="StyleBox" id=6]
+[ext_resource path="res://GameStart.gd" type="Script" id=7]
+[ext_resource path="res://audio/bgm0.ogg" type="AudioStream" id=8]
+[ext_resource path="res://audio/bgm_meiling.ogg" type="AudioStream" id=9]
+[ext_resource path="res://audio/bgm_seiga.ogg" type="AudioStream" id=10]
+[ext_resource path="res://audio/bgm_junko.ogg" type="AudioStream" id=11]
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+outline_size = 2
+outline_color = Color( 0.568627, 0.592157, 0.705882, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+extra_spacing_top = -10
+extra_spacing_bottom = -10
+font_data = ExtResource( 3 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="bg2" type="Sprite" parent="."]
+modulate = Color( 0.956863, 0.901961, 0.901961, 1 )
+position = Vector2( 400, 300 )
+texture = ExtResource( 2 )
+
+[node name="Particle1" type="CPUParticles2D" parent="."]
+position = Vector2( 180, 150 )
+amount = 100
+lifetime = 5.0
+speed_scale = 3.0
+explosiveness = 0.8
+randomness = 0.5
+spread = 180.0
+gravity = Vector2( 0, 2 )
+initial_velocity = 25.0
+initial_velocity_random = 1.0
+scale_amount = 3.0
+color = Color( 0.854902, 0.160784, 0.94902, 1 )
+
+[node name="Particle2" type="CPUParticles2D" parent="."]
+position = Vector2( 400, 230 )
+emitting = false
+amount = 120
+lifetime = 9.0
+speed_scale = 3.0
+explosiveness = 0.8
+randomness = 0.5
+spread = 180.0
+gravity = Vector2( 0, 2 )
+initial_velocity = 30.0
+initial_velocity_random = 1.0
+scale_amount = 3.0
+color = Color( 0.870588, 0.94902, 0.160784, 1 )
+
+[node name="Particle3" type="CPUParticles2D" parent="."]
+position = Vector2( 610, 140 )
+emitting = false
+amount = 180
+lifetime = 7.0
+speed_scale = 3.0
+explosiveness = 0.8
+randomness = 0.5
+spread = 180.0
+gravity = Vector2( 0, 2 )
+initial_velocity = 20.0
+initial_velocity_random = 1.0
+scale_amount = 2.0
+color = Color( 0.32549, 0.952941, 0.45098, 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 90.0
+margin_top = 60.0
+margin_right = 698.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 2 )
+text = "Spring Festival 
+in Gensokyo"
+align = 1
+
+[node name="illu_reimu" type="Sprite" parent="."]
+position = Vector2( 110, 390 )
+texture = ExtResource( 4 )
+
+[node name="illu_yachie" type="Sprite" parent="."]
+position = Vector2( 680, 380 )
+texture = ExtResource( 5 )
+
+[node name="GameStart" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 450.0
+margin_right = 397.023
+margin_bottom = 475.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 6 )
+custom_styles/normal = ExtResource( 6 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.87451, 0.819608, 0.235294, 1 )
+text = "Game Start"
+script = ExtResource( 7 )
+
+[node name="Bgm0" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 320 )
+stream = ExtResource( 8 )
+volume_db = 5.0
+autoplay = true
+
+[node name="BgmMeiling" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 320 )
+stream = ExtResource( 9 )
+volume_db = -50.0
+autoplay = true
+
+[node name="BgmSeiga" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 320 )
+stream = ExtResource( 10 )
+volume_db = -50.0
+autoplay = true
+
+[node name="BgmJunko" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 400, 320 )
+stream = ExtResource( 11 )
+volume_db = -50.0
+autoplay = true
+
+[node name="Tween" type="Tween" parent="."]

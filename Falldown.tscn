@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://image/chara_yachie.png" type="Texture" id=1]
+[ext_resource path="res://image/chara_reimu.png" type="Texture" id=2]
+[ext_resource path="res://Falldown.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "yachie",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "reimu",
+"speed": 5.0
+} ]
+
+[node name="Falldown" type="AnimatedSprite"]
+frames = SubResource( 1 )
+animation = "yachie"
+script = ExtResource( 3 )
