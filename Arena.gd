@@ -19,7 +19,7 @@ var opponent=null
 
 # parameters of the performer
 var performerList={'Meiling':Meiling,'Junko':Junko,'Seiga':Seiga}
-var performerName='Meiling'
+var performerName='Seiga'
 var performer= null
 var performerLevel=4
 
